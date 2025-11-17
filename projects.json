@@ -1,0 +1,10 @@
+{
+  "projects": [
+    {
+      "title": "Splunk SIEM – Installation & Setup",
+      "description": "Complete installation and initial configuration of Splunk Enterprise in a lab environment",
+      "image": "assets/splunk.png",
+      "link": "https://github.com/Preeverse/cybersecurity-projects/blob/main/Projects/SIEM/Splunk/Splunk_Installation.md" 
+    }
+  ]
+}
