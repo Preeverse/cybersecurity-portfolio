@@ -1,22 +1,337 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cybersecurity Portfolio</title>
-    <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preetha Paindupal Ramadoss | Cybersecurity Portfolio</title> 
+  <style>
+    header h1 {
+      color: white;
+      font-weight: bold;
+      font-style: italic;
+      letter-spacing: 0.5px;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    header {
+      background-color: #673ab7;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav {
+      background-color: #512da8;
+      display: flex;
+      flex-wrap: wrap;         /* Enables wrapping on small screens */
+      justify-content: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      margin: 8px 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.95rem;
+    } 
+    @media (max-width: 600px) {
+    nav a {
+      flex: 1 1 100%;
+      text-align: center;
+      font-size: 1rem;
+    }
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    .btn-primary {
+      display: inline-block;
+      background-color: #ffeb3b;
+      color: #333;
+      font-weight: bold;
+      padding: 10px 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .tag {
+      background-color: #e0e0e0;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .project-card h3 {
+      margin-top: 0;
+    }
+    .btn-secondary {
+      display: inline-block;
+      background-color: #673ab7;
+      color: white;
+      padding: 8px 16px;
+      margin-top: 10px;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    footer {
+  background-color: #ede7f6;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: #555;
+  position: relative;
+}
+
+.nav-arrows {
+  margin-bottom: 10px;
+}
+
+.nav-arrows a {
+  font-size: 24px;
+  margin: 0 20px;
+  text-decoration: none;
+  color: #673ab7;
+  font-weight: bold;
+}
+
+.nav-arrows a:hover {
+  color: #311b92;
+}
+   /* === Skills Section === */
+#skills {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+#skills h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #4b0082;
+  margin-bottom: 40px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skills-group {
+  flex: 1 1 300px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-top: 5px solid #9370db;
+}
+
+.skills-group h3 {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.skills-group ul {
+  padding-left: 20px;
+  list-style-type: disc;
+  color: #444;
+  font-size: 0.95rem;
+}
+/* Testimonials Section */
+#testimonials {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.testimonial-card {
+  background: #f9f9f9;
+  padding: 24px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.testimonial-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+  font-style: italic;
+}
+
+.testimonial-card footer {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: #555;
+  text-align: right;
+}
+#contact {
+  background-color: #f3f3f3;
+  padding: 40px 20px;
+  border-top: 2px solid #ddd;
+}
+
+.resume-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.resume-links .btn-secondary {
+  background-color: #673ab7;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  width: fit-content;
+}
+
+.resume-links .btn-secondary:hover {
+  background-color: #512da8;
+
+.resume-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.btn-resume {
+  background-color: #512da8;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-resume:hover {
+  background-color: #7e57c2;
+}}
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Cybersecurity Portfolio</h1>
-        <p>Showcasing hands-on security projects.</p>
-    </header>
+  <header>
+    <h1>Preetha Paindupal Ramadoss</h1> 
+    <p>Cybersecurity Professional | QA Automation Engineer</p> 
+  </header>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div id="project-list" class="project-grid"></div>
-    </section>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <script src="js/script.js"></script>
+  <section id="home" class="hero">
+  <div class="content">
+    <h1>Hi, Preetha</h1> 
+    <p>
+      I'm a cybersecurity enthusiast with a strong foundation in QA automation engineering. My passion lies in protecting digital assets and ensuring the integrity of IT systems through proactive threat detection and incident response.
+    </p>
+    <p>
+     This portfolio showcases my practical experience in cybersecurity through hands-on projects built in a controlled home lab environment. It demonstrates my ability to design, deploy, and manage secure IT environments, experiment with security tools, and document technical workflows for reproducibility.
+    </p>
+    <p>
+      I thrive in dynamic, collaborative environments and am skilled at applying best practices to streamline processes and deliver results on time. With certifications in cybersecurity and testing, I bring a strategic mindset and technical proficiency to every project. 
+    </p>
+    <p>
+      I'm currently exploring opportunities in:
+      <ul class="career-tags">
+        <li> Cybersecurity Analyst</li> 
+        <li> SOC Analyst </li> 
+        <li> Incident Response Specialist</li> 
+        <li> Penetration Testing</li> 
+      </ul>
+    </p>
+    <a href="#projects" class="btn-primary">View my projects here!</a>
+  </div>
+</section>
+  <section id="projects" class="projects">
+  <h2>My Projects</h2>.
+    <div class="project-grid">
+    <div class="project-card">
+      <h3>Splunk - A SIEM solution</h3> 
+      <p>Installation, Log analysis, Search queries and Dashboards </p> 
+      <a href="https://github.com/Preeverse/cybersecurity-projects/blob/main/Projects/SIEM/Splunk" class="btn-secondary" target="_blank">GitHub</a>
+    </div>
+  </div>
+</section>
+
+  <section id="contact">
+  <h2>Contact</h2>
+  <p>If you'd like to connect about job opportunities, freelance projects, or collaborations, feel free to reach out!</p>
+
+  <div class="contact-methods">
+    <p><strong>Email:</strong> <a href="mailto:preethudoss@gmail.com">preethudoss@gmail.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/preetha-pr/" target="_blank">linkedin.com/in/preetha-pr</a></p>
+    
+ <section id="resume">
+  <h2>Download My Resume</h2>
+  <p>Download PDF version of my resume</p>
+  <a class="btn-secondary" href="resume.pdf" target="_blank">Cybersecurity Resume</a>
+</section> 
+
+<footer>
+  <div class="nav-arrows">
+    <a href="#top" title="Back to Top">❮</a>
+    <a href="#contact" title="Jump to Contact">❯</a>
+  </div>
+  <p>&copy; 2025 Preetha Paindupal Ramadoss. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
+        
+
+
+
