@@ -3,9 +3,8 @@ This portfolio showcases my practical experience in cybersecurity through hands-
 
 ## Projects
 
-### ** SIEM - Security Information and Event Management**
-- **Splunk** – Lab exercises for setting up Splunk Enterprise, configuring log forwarding, and searching event logs.
-- **Wazuh** – Planned experiments for log collection, alerting, and security monitoring.
+**Brute-force attack detection and investigation** - Attack simulation using Kali Linux against Active Directory Domain Controller, log ingestion into Splunk, indexing, alerting, and a complete SOC analyst investigation.
+
 
 ## About Me
 - Name: Preetha Paindupal Ramadoss
